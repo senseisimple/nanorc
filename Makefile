@@ -23,5 +23,8 @@ ifdef BSDREGEX
   FILTER += | sed -e 's|\\<|[[:<:]]|g;s|\\>|[[:>:]]|g'
 endif
 
+ifdef POSIX
+  FILTER += | sed -e 's|\\<||g;s|\\>||g'
+endif
 
 .PHONY: ~/.nanorc
