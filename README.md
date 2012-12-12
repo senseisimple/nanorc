@@ -13,15 +13,27 @@ syntax definitions to replace and expand the defaults.
 Installation
 ------------
 
-Use `make` to install to `~/.nanorc`.
+To automatically retrieve these sources and install, save and run the [install_nanorc.sh] file
 
-Usage Example: make NOBINDINGS=1 TEXT=white POSIX=1
+`./install_nanorc.sh [NOBINDINGS=1 TEXT=white]` See possible arguments below.
 
-OLDNANO=[0|1]
-NOBINDINGS=[0|1]
-BSDREGEX=[0|1] Use BSD style regex class [[:>:]]
-POSIX=[0|1] Use Posix style regex (no delimiters)
-TEXT=[red|green|yellow|blue|magenta|cyan|white] Default text color (see description below)
+NOTE: this may require root privilege to remove an incompatible /etc/nanorc file.
+
+Otherwise, Use `make` to install to `~/.nanorc`.
+
+Usage Example: `make NOBINDINGS=1 TEXT=white POSIX=1`
+
+POSSIBLE ARGUMENTS
+
+`OLDNANO=[0|1]` Disable newer nano features (Selected automatically for OS X; See Compatibility section)
+
+`NOBINDINGS=[0|1]` Disable special key bindings
+
+`BSDREGEX=[0|1]` Use BSD style regex class [[:>:]]
+
+`POSIX=[0|1]` Use Posix style regex (no delimiters)
+
+`TEXT=[red|green|yellow|blue|magenta|cyan|white]` Default text color (see description below)
 
 If your terminal text color isn't black, you'll need to specify it when
 installing, using `make TEXT=white`, where `white` is one of the following

@@ -12,7 +12,7 @@ ifeq ($(shell uname),Darwin)
 endif
 
 ifdef OLDNANO
-  FILTER += | sed -e '/^header/d;/^bind/d;/^set undo/d'
+  FILTER += | sed -e '/^header/d;/^unbind/d;/^bind/d;/^set undo/d'
 endif
 
 ifdef NOBINDINGS
