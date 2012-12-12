@@ -15,7 +15,13 @@ Installation
 
 Use `make` to install to `~/.nanorc`.
 
-make NOBINDINGS=1 TEXT=white POSIX=1
+Usage Example: make NOBINDINGS=1 TEXT=white POSIX=1
+
+OLDNANO=[0|1]
+NOBINDINGS=[0|1]
+BSDREGEX=[0|1] Use BSD style regex class [[:>:]]
+POSIX=[0|1] Use Posix style regex (no delimiters)
+TEXT=[red|green|yellow|blue|magenta|cyan|white] Default text color (see description below)
 
 If your terminal text color isn't black, you'll need to specify it when
 installing, using `make TEXT=white`, where `white` is one of the following

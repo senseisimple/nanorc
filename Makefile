@@ -1,7 +1,7 @@
 THEME = theme.sed
 
 ~/.nanorc: *.nanorc mixins/*.nanorc $(THEME)
-	cat *.nanorc | sed -f mixins.sed | sed -f $(THEME) $(FILTER) > .nanorc
+	cat *.nanorc | sed -f mixins.sed | sed -f $(THEME) $(FILTER) > ~/.nanorc
 
 ifeq ($(shell test -f ~/.nanotheme && echo 1),1)
   THEME = ~/.nanotheme
