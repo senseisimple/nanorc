@@ -15,6 +15,8 @@ Installation
 
 Use `make` to install to `~/.nanorc`.
 
+make NOBINDINGS=1 TEXT=white POSIX=1
+
 If your terminal text color isn't black, you'll need to specify it when
 installing, using `make TEXT=white`, where `white` is one of the following
 valid color names:

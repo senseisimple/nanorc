@@ -1,6 +1,6 @@
 THEME = theme.sed
 
-../.nanorc: *.nanorc mixins/*.nanorc $(THEME)
+~/.nanorc: *.nanorc mixins/*.nanorc $(THEME)
 	cat *.nanorc | sed -f mixins.sed | sed -f $(THEME) $(FILTER) > .nanorc
 
 ifeq ($(shell test -f ~/.nanotheme && echo 1),1)
@@ -31,4 +31,4 @@ ifdef POSIX
   FILTER += | sed -e 's|\\<||g;s|\\>||g'
 endif
 
-.PHONY: ../.nanorc
+.PHONY: ~/.nanorc
